@@ -103,18 +103,6 @@ GROUP BY T.Name;
 -- Insert a new tourist
 INSERT INTO Tourists (Tourist_ID, Name, Phone, Email, Nationality)
 VALUES (8, 'Carlos Mendoza', '555-123-9876', 'carlos.mendoza@example.com', 'Mexico');
-
-
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
  
 -- Update payment status
 UPDATE Payments
