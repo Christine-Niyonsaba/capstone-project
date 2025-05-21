@@ -149,11 +149,22 @@ The process begins when a tourist submits a booking request for a tour package. 
 
 ## 🧠 Normalization Checks
 
-✅ 1NF: Atomic values, no repeating groups
+- 1NF: Atomic values, no repeating groups
+  
+- 2NF: All non-PK fields fully dependent on entire PK
 
-✅ 2NF: All non-PK fields fully dependent on entire PK
+- 3NF: No transitive dependencies
 
-✅ 3NF: No transitive dependencies
+
+
+
+
+## 📸 Screenshots
+
+**Pluggable Database**
+
+![Screenshot 2025-04-29 223818](https://github.com/user-attachments/assets/3650b06d-b829-4cde-896e-2e721cec6778)
+
 
 
 
