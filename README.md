@@ -53,7 +53,43 @@ This system will be used in:
 # Description: Tourism Booking and Management Workflow
 The process begins when a tourist submits a booking request for a tour package. The system then validates the request and checks the package availability. If the selected package is available, the booking is processed, and the system assigns the booking details. An invoice and confirmation are sent to the tourist. Upon receipt, the tourist proceeds with payment, and the booking is marked as confirmed. The MIS updates all records and notifies the tour operator for final review and coordination.
 
-## Logical Flow Highlights:
+## 🎯 MIS Alignment
+
+This business process supports the following MIS objectives:
+
+- Real time Data : Instantly captures and processes bookings, payments, and customer info.
+
+- Smart Decisions: Offers insights for better planning and service delivery.
+
+- Fewer Errors: Automates tasks to reduce mistakes and boost reliability.
+
+ ## 📌  Objectives
+
+- Automate and simplify tour booking for tourists and agencies.
+
+- Boost communication and customer satisfaction.
+
+- Ensure secure and traceable payments.
+
+## ✅ Expected Outcomes
+
+- Quick, clear tourist-provider communication.
+
+- Ensure secure and traceable payments.
+
+- Enable real-time reports and feedback for planning.
+
+## 🔄 Interaction Summary
+
+- Tourist sends booking request.
+
+- System alerts and updates status.
+
+- Operator confirms with Transport Provider.
+
+- System logs and notifies Agency.
+
+## 💡 Logical Flow Highlights:
 
 - Clear start and end points.
 
@@ -65,21 +101,15 @@ The process begins when a tourist submits a booking request for a tour package. 
 
 - Tour operators review bookings and update availability.
 
-  ## Key Interactions
-  
-- Tourist sends booking request.
-
-- System alerts and updates status.
-
-- Operator confirms with Transport Provider.
-
-- System logs and notifies Agency.
-
+ 
 🖼  **BPMN Diagram**
 
  ![bpmn diagram drawio](https://github.com/user-attachments/assets/05be22a5-d3ec-4565-9dd7-1e4ce8d389fc)
 
- ## ⬇️ Entities & Attributes
+## 📊 LOGICAL MODEL DESIGN (Phase )
+
+ ## ⬇️ Entities & Attributes  
+ 
 **1.	Tourist:**
 
 -	`Tourist_ID` (INT PK, NOT NULL)
@@ -145,7 +175,7 @@ The process begins when a tourist submits a booking request for a tour package. 
 
 - CHECK: For enumerated fields like `Payment_Status`
 
--DEFAULT: Status fields can default to `'Pending'`
+- DEFAULT: Status fields can default to `'Pending'`
 
 ## 🧠 Normalization Checks
 
@@ -155,15 +185,65 @@ The process begins when a tourist submits a booking request for a tour package. 
 
 - 3NF: No transitive dependencies
 
+## 🌍  Real-World Data Handling Scenarios
+
+- **Multiple Bookings**: A tourist can make multiple bookings, tracked via the Tourist-Booking relationship.
+
+- **Payment Failures**: Payment_Status tracks payment issues and retries.
+
+- **Tour Availability**: The Booking table tracks tourists for each package to avoid overbooking.
+
+ ## 📘 SUmmary
+
+The model helps track tourist activities, manage bookings and payments accurately, and streamline operations between all parties involved. It sets the groundwork for a reliable, future-ready system that improves efficiency and enhances the visitor experience.
+
+##  📸 logic model
+![Screenshot 2025-05-07 182524](https://github.com/user-attachments/assets/5cb39a16-ef5c-44cb-bd31-afb805bdcf2c)
 
 
-
-
-## 📸 Screenshots
-
-**Pluggable Database**
+ ## Pluggable Database Creation and Naming ( phase 4)
+ 
+ 📸 **Pluggable Database**
 
 ![Screenshot 2025-04-29 223818](https://github.com/user-attachments/assets/3650b06d-b829-4cde-896e-2e721cec6778)
+
+
+## Database Creation and OEM Monitoring ( phase 5)
+ 
+
+## 📸 Table Creation
+
+<img width="559" alt="image" src="https://github.com/user-attachments/assets/fa37995f-a9a7-44e3-84e9-28bf37dc4f67" />
+
+<img width="428" alt="image" src="https://github.com/user-attachments/assets/1da8f159-fc57-470e-93c9-788990c4f50b" />
+
+![Screenshot 2025-04-29 225827](https://github.com/user-attachments/assets/8e93f061-4e58-44b1-8082-c41bfe0691f9)
+
+## Data insertion
+
+**Data inserted in tourist**
+
+![Screenshot 2025-04-29 233043](https://github.com/user-attachments/assets/752b56ca-f5fa-4bf7-9768-876fff068e72)
+
+
+**Data inserted in tour package**
+
+![Screenshot 2025-04-29 233043](https://github.com/user-attachments/assets/3fb32ae0-3953-45ae-8c4a-af8aa35b79da)
+
+ 
+
+![Screenshot 2025-04-29 231332](https://github.com/user-attachments/assets/6991ade0-8440-4040-a042-26e3bb35c67c)
+
+![Screenshot 2025-04-29 231532](https://github.com/user-attachments/assets/bbe7ae15-d39c-48be-b8a4-879cac87fd1d)
+
+![Screenshot 2025-04-29 231830](https://github.com/user-attachments/assets/ded0bd4c-244e-44b7-8237-f120164fdff8)
+
+
+
+
+
+
+
 
 
 
